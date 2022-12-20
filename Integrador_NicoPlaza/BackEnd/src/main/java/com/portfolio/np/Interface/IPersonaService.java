@@ -1,7 +1,8 @@
-package com.portfolio.Interface;
+package com.portfolio.np.Interface;
 
 import java.util.List;
-import com.portfolio.Entity.Persona;
+
+import com.portfolio.np.Entity.Persona;
 
 public interface IPersonaService {
 	

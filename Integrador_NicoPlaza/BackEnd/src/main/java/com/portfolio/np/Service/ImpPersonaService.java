@@ -1,13 +1,13 @@
-package com.portfolio.Service;
+package com.portfolio.np.Service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.portfolio.Entity.Persona;
-import com.portfolio.Interface.IPersonaService;
-import com.portfolio.Repository.IPersonaRepository;
+import com.portfolio.np.Entity.Persona;
+import com.portfolio.np.Interface.IPersonaService;
+import com.portfolio.np.Repository.IPersonaRepository;
 
 @Service
 public class ImpPersonaService implements IPersonaService{
