@@ -1,7 +1,6 @@
 package com.portfolio.np.Security.Entity;
 
 import com.portfolio.np.Security.Enums.RolNombre;
-
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -12,42 +11,38 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 public class Rol {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
-	@NotNull
-	@Enumerated(EnumType.STRING)
-	private RolNombre rolNombre;
-	
-	
-	public Rol() {
-		}
-	
-	public Rol(RolNombre rolNombre) {
-		this.rolNombre = rolNombre;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    private RolNombre rolNombre;
+    
+    //Constructor
+    public Rol() {
+    }
 
+    public Rol(RolNombre rolNombre) {
+        this.rolNombre = rolNombre;
+    }
+    
+    //Getter y Setter
 
-	public int getId() {
-		return id;
-	}
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public RolNombre getRolNombre() {
+        return rolNombre;
+    }
 
-
-	public RolNombre getRolNombre() {
-		return rolNombre;
-	}
-
-
-	public void setRolNombre(RolNombre rolNombre) {
-		this.rolNombre = rolNombre;
-	}
-	
-	
-	
-	
+    public void setRolNombre(RolNombre rolNombre) {
+        this.rolNombre = rolNombre;
+    }
+    
+    
 }
