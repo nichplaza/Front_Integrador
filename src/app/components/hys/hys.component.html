@@ -6,12 +6,13 @@
     </div>
 
 
-    <div class="text-center col-sm-4 col-md-4 col-lg-4" *ngFor="let skill of skill">
+    <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
         <circle-progress 
             [percent]="(skill.porcentaje)" 
             [radius]="90" [imageSrc]="''" 
             [title]="(skill.nombre)"
-            [showImage]="true" 
+            [showTitle]="true"
+            [showImage]="false" 
             [imageHeight]="70" 
             [imageWidth]="70" 
             [showUnits]="false" 
@@ -24,13 +25,15 @@
             [animationDuration]="300">
         </circle-progress>
 
-        <td *ngIf="isLogged">
-            <button class="btn btn-light" routerLink="/edithys/{{skill.id}}">
-                <i class="bi bi-pencil-square"></i></button>
-        </td>
-        <td *ngIf="isLogged">
-            <button class="btn btn-light" (click)="delete(skill.id)">
-                <i class="bi bi-eraser"></i>BORRAR</button>
-        </td>
+        <div>
+            <td *ngIf="isLogged">
+                <button class="btn btn-light" routerLink="/editskill/{{skill.id}}">
+                    <i class="bi bi-pencil-square"></i></button>
+            </td>
+            <td *ngIf="isLogged">
+                <button class="btn btn-light" (click)="delete(skill.id)">
+                    <i class="bi bi-eraser"></i></button>
+            </td>
+        </div>
     </div>
 </div>

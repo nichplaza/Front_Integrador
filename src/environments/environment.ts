@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
 
-  //URL:'http://localhost:4200',
-  URL:'https://spotless-nancee-nichplaza.koyeb.app/'
+  URL:'http://localhost:4200'
+
 };
 
 /*
