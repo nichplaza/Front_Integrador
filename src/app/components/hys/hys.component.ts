@@ -11,10 +11,9 @@ import { TokenService } from 'src/app/service/token.service';
 export class HysComponent implements OnInit {
   skill: Skill[] = [];
 
-  constructor(private skillS:SkillService, private tokenService:TokenService) { }
+  constructor(private skillS: SkillService, private tokenService: TokenService) { }
   isLogged = false;
-
-
+  
   ngOnInit(): void {
     this.cargarSkills();
     if(this.tokenService.getToken()){
@@ -43,5 +42,4 @@ export class HysComponent implements OnInit {
       )
     }
   }
-
 }

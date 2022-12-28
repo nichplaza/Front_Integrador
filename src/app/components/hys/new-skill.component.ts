@@ -12,7 +12,7 @@ export class NewSkillComponent implements OnInit {
   nombre: string;
   porcentaje: number;
 
-  constructor(private skillS:SkillService, private router: Router) { }
+  constructor(private skillS: SkillService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -21,12 +21,11 @@ export class NewSkillComponent implements OnInit {
     const skill = new Skill(this.nombre, this.porcentaje);
     this.skillS.save(skill).subscribe(
       data => {
-        alert("Skill creada correctamente")
+        alert("Skill creada correctamente");
         this.router.navigate(['']);
       }, err =>{
-        alert("Fallo al crear la skill")
+        alert("Fallo al crear la skill");
         this.router.navigate(['']);
-        
       }
     )
   }
